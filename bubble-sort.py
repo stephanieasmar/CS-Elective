@@ -1,37 +1,30 @@
-# Implement the bubble sort algorithm in the bubble_sort method.
-# Return the sorted array.
-#
-# Helpful Resources
-# https://www.youtube.com/watch?v=8Kp-8OGwphY
-# http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBubbleSort.html
-#
+import datetime
 
-def bubble_sort(my_arr):
+def bubble_sort(my_array):
+    array_length = len(my_array)
     swapped = True
-    while swapped == True:
+
+    while swapped:
         swapped = False
-        for i in range(len(my_arr)-1):
-            if my_arr[i] > my_arr[i+1]:
-                my_arr[i], my_arr[i+1] = my_arr[i+1], my_arr[i]
-                swapped == True
-    return my_arr
 
-print bubble_sort([1,3,2,5,6])
+        for j in range(0, array_length):
+            if j == array_length - 1:
+                continue
 
+            if my_array[j] > my_array[j + 1]:
+                swapped = True
+                temp = my_array[j]
+                my_array[j] = my_array[j + 1]
+                my_array[j + 1] = temp
 
+    return my_array
 
-# input_arrays = [
-#     [],
-#     [9, 8, 7, 6, 5, 4, 3, 2, 1],
-#     [1, 2, 3, 4],
-#     [4, 6, 1, 3, 7, 8, 4, 3, 4],
-#     [1],
-#     [1, 3, 2]
-# ]
+def run_and_measure(array):
+    start_time = datetime.datetime.now()
+    bubble_sort(array)
+    end_time = datetime.datetime.now()
+    duration = end_time - start_time
+    print("array size: " + str(len(array)) + " this bubble sort took " + str(duration))
 
-
-# for array in input_arrays:
-#     print("")
-#     print(" Input: " + str(array))
-#     sorted_array = bubble_sort(array)
-#     print("Output: " + str(sorted_array))
+for i in range(0, 6000, 1000):
+    run_and_measure(range(i, 0, -1))
