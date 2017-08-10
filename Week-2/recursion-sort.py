@@ -47,10 +47,26 @@ def factorial(n):
 factorial(10) #Dont forget to call the function!!!
 
 
+#How to reverse and array with a for loop:
+array = [1, 2, 3, 4, 5]
+for i in range(len(array) / 2)
+    j = len(array) - i - 1
+    array[i], array[len(array) - 1 - i] = array[len(array) - 1 - i], array[i]
 
+
+#How to reverse an array with recursion:
 def rev_array(array, i):
+    if i >= len(array) / 2 or len(array) == none:
+        return array
 
+        j = len(array) - i - 1
+        array[i], array[j] = array[j], array[i]
+        return reverse_array(array, i + 1)
 
+    
+
+    
+    
     
 
 
