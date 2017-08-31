@@ -1,3 +1,5 @@
+# First In First Out
+
 # Interface Methods for Queues:
     # enqueue = adds the new node to end of queue
     # dequeue = retruns next node & remove it from queue
