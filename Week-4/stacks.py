@@ -18,11 +18,18 @@ class MyStack:
         self.top = None
     
     def peek(self):
-        pass
+        return self.top
 
     def pop(self):
-        pass
+        if self.top == None:
+            return None
+
+        node_to_return = self.top
+        self.top = self.top.below
+        return node_to_return
 
     def push(self, value):
-        pass
+        new_node = Node(value)
+        new_node.below = self.top
+        self.top = new_node
 
