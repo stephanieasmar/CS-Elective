@@ -10,4 +10,12 @@ n3.next=n4
 n4.next=n5
 
 
-while 
+def answer(head):
+    current_node = head
+    while current_node.next != None:
+        if current_node.next = head
+            return true
+        else:
+                current_node = current_node.next
+    return false
+    
