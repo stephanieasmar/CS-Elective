@@ -35,3 +35,9 @@ Worst case scenario: O(n)
 
 # 4.) UNBALANCED TREES:
 # A tree with subtrees that have a difference in height tht is greater than one
+
+
+Traversing BSTs:
+# In-Order Traversal
+# Pre-Order Traversal
+# Post-Order Traversal
