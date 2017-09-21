@@ -2,6 +2,13 @@
 # Binary tree = each tree has max 2 children (left and right children)
 # Binary search tree = binary tree with a single rule, if you look at nodes to right of a node, they are all >, look at nodes to left, they are all <
 
+Best case scenario: O(log n)
+# Not constant time, but close, and nowhere near as bad as linear growth
+
+Worst case scenario: O(n)
+# Linear growth
+
+
 # Today's Class (Day 10):
 # sets
 # Recursive objects
