@@ -6,6 +6,22 @@
 # 3.) Depth first traversal (i.e. InOrder Traversal) RULE = left, root, right
 # 4.) Preorder RULE = Root, left, right
 
+
+# 2 ROTATION METHODS:
+# Rotations can only be performed on Binary Trees (not BST)
+
+# 2 Types: Left & Right
+
+# LEFT ROTATION (Clockwise):
+# Step 1: Take parent of pivot node will become the new left child of pivot node
+# Step 2: Pivot node's left child will become the right child of the original parent node
+
+
+# RIGHT ROTATION (Counter-Clockwise):
+# Step 1: Parent node of pivot node becomes the right child of pivot node
+# Step 2: Pivot node's right child will become the left child of the original parent node
+
+
 import numpy.random as nprnd 
 from binarytree import Node, show
 
@@ -68,6 +84,22 @@ class BSTNode(Node):
 
 
 
+    def left_rotate(self):
+        new_parent = self.right
+        new_right = new_parent.left
+        new_parent.left = self
+        self.right = new_right
+        return new_parent
+
+    def right_rotate(self):
+        new_parent = self.left
+        new_left = new_parent.right
+        new_parent.right = self
+        self.left = new_left
+        return new_parent
+
+
+
 class BST:
     def __init__(self):
         self.root = None
@@ -100,6 +132,16 @@ class BST:
         if self.root is not None:
             self.root.get_breadth_first_nodes
 
+    def left_rotate(self, node):
+        new_parent = node.left_rotate()
+        if node == self.root:
+            self.root = new_parent
+
+    def right_rotate(self, node):
+        new_parent = node.right_rotate()
+        if node == self.root:
+            self.root = new_parent      
+
     
 
 
@@ -116,7 +158,11 @@ show(tree.root)
 # tree.print_postorder()
 # tree.print_preorder()
 # tree.print_inorder()
-tree.get_breadth_first_nodes()
+# tree.get_breadth_first_nodes()
+# tree.right_rotate(tree.root)
+# show(tree.root)
+tree.left_rotate(tree.root)
+show(tree.root)
 
 
 
