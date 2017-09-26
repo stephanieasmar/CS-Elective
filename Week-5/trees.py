@@ -16,6 +16,7 @@ Worst case scenario: O(n)
 # Unbalanced trees
 
 
+
 # 1.) SETS:
 # A data structure, similar to an array but....cannot contain duplicates, and is unordered.
 # Uses hashing to do lookups in constant time
@@ -33,11 +34,31 @@ Worst case scenario: O(n)
 # node is a leaf with 2 children:
 
 
+
 # 4.) UNBALANCED TREES:
 # A tree with subtrees that have a difference in height tht is greater than one
+
 
 
 Traversing BSTs:
 # In-Order Traversal
 # Pre-Order Traversal
 # Post-Order Traversal
+
+Red/Black Trees:
+# https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
+
+B-Trees: Will keep a tree perfectly balanced
+# https://www.cs.usfca.edu/~galles/visualization/BTree.html
+
+
+
+WHITEBOARD CHALLENGE:
+# Invert a binary tree (NOT a Binary serch tree)
+# for each node, swap its left and right nodes
+
+
+
+
+
+
